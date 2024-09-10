@@ -1,0 +1,81 @@
+body {
+  background-color: #1d1d1d;
+  font-family: 'Sawarabi Mincho', serif;
+  font-size: 1rem;
+
+}
+
+.app{
+  height: 100vh;
+
+}
+
+.control-btn {
+  border-color: #b23a3a;
+  color: #ececec;
+}
+
+.header{
+  border-bottom: 2px solid #e6b8b7;
+  /* background: #fcefe9; */
+}
+.header p {
+  margin: 0;
+}
+
+.character-display p {
+  font-size: 2rem;
+  color: #b23a3a;
+  margin: 0;
+}
+
+
+.canvas-container{
+  background: #f8f4e3;
+
+}
+canvas {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+canvas:hover{
+  cursor: crosshair;
+}
+
+button#clear-canvas {
+  border-color: #b23a3a;
+  color: #b23a3a;
+}
+
+.controls{
+  border-top: 2px solid #e6b8b7;
+
+}
+
+.character-list {
+  max-height: 400px;
+  overflow-y: auto;
+  width: 420px;
+  z-index: 1000;
+  padding: 10px;
+}
+
+.character-list-div {
+  transform: translate(700px, -241px);
+  background-color: #f9f9f9;
+  border: 2px solid #b23a3a;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.character-list-div p {
+  color: #b23a3a;
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.row-cols-5{
+  margin-right: 0 !important
+}
+
+
