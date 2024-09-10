@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/practica-japones/static/css/main.a479d344.css",
+    "main.js": "/practica-japones/static/js/main.62e9edb6.js",
+    "static/js/453.bd036f2e.chunk.js": "/practica-japones/static/js/453.bd036f2e.chunk.js",
+    "index.html": "/practica-japones/index.html",
+    "main.a479d344.css.map": "/practica-japones/static/css/main.a479d344.css.map",
+    "main.62e9edb6.js.map": "/practica-japones/static/js/main.62e9edb6.js.map",
+    "453.bd036f2e.chunk.js.map": "/practica-japones/static/js/453.bd036f2e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a479d344.css",
+    "static/js/main.62e9edb6.js"
+  ]
+}
