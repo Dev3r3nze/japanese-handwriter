@@ -71,7 +71,8 @@ function App() {
 
 
   const nextCharacter = () => {
-    const canvas = canvasRef.current;
+      clearReferenceImage();  // Borrar la imagen si está visible
+      const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     setCurrentIndex((prevIndex) => {
@@ -82,7 +83,8 @@ function App() {
   };
 
   const previousCharacter = () => {
-    const canvas = canvasRef.current;
+      clearReferenceImage();  // Borrar la imagen si está visible
+      const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     setCurrentIndex((prevIndex) => {
@@ -92,7 +94,8 @@ function App() {
     });
   };
   const handleCharacterTypeChange = (e) => {
-    const canvas = canvasRef.current;
+      clearReferenceImage();  // Borrar la imagen si está visible
+      const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     const selectedType = e.target.value;
@@ -216,7 +219,7 @@ function App() {
     const canvas = referenceCanvasRef.current;
     const ctx = canvas.getContext('2d');
     const img = new Image();
-    img.src = imageSrc;
+    img.src = `${process.env.PUBLIC_URL}${imageSrc}`;
 
     img.onload = () => {
       // Ajustes de tamaño y escala
@@ -236,6 +239,10 @@ function App() {
       // Restaurar la opacidad
       ctx.globalAlpha = 1.0;
     };
+    img.onerror = () => {
+      console.error("Error al cargar la imagen", imageSrc);
+    };
+    
   };
 
 
@@ -375,6 +382,7 @@ function App() {
   const handleCharacterClick = (char, romajiChar) => {
     setCurrentCharacter(char);
     setCurrentCharacter(romajiChar);
+    clearReferenceImage();  // Borrar la imagen si está visible
     setShowList(false); // Oculta la lista tras seleccionar
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
